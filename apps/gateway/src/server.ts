@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // middleware to parse incoming JSON
-// limits payload to 1mb to prevent momry exhaustion attacks
+// limits payload to 1mb to prevent memory exhaustion attacks
 app.use(express.json({ limit: '1mb' }));
 
 // liveness probe endpoint for future kubernetes deployment
