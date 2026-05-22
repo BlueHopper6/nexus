@@ -8,12 +8,17 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build --workspaces --if-present",
-    "dev:gateway": "npm run dev -w apps/gateway",
-    "dev:worker": "npm run dev -w apps/worker"
+    "build": "tsc -b",
+    "dev:gateway": "tsx watch apps/gateway/src/server.ts",
+    "dev:worker": "tsx watch apps/worker/src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  }
 }
